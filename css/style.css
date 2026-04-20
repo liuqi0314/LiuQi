@@ -266,6 +266,13 @@ img {
   to { transform: rotate(360deg); }
 }
 
+.avatar-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 .avatar-placeholder svg {
   width: 80px;
   height: 80px;
