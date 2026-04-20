@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="刘齐 - 北京师范大学博士生，研究方向：生态系统服务、可持续发展、社会-生态系统、AI for Science">
+  <meta name="keywords" content="刘齐, Qi Liu, 生态系统服务, 可持续发展, ecosystem services, sustainability, AI for Science">
+  <title>刘齐 | 学术主页</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== 粒子背景 ===== -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- ===== 导航栏 ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span data-zh>刘齐</span>
+        <span data-en>Qi Liu</span>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#research" class="nav-link">
+          <span data-zh>研究方向</span><span data-en>Research</span>
+        </a></li>
+        <li><a href="#publications" class="nav-link">
+          <span data-zh>论文发表</span><span data-en>Publications</span>
+        </a></li>
+        <li><a href="#education" class="nav-link">
+          <span data-zh>教育经历</span><span data-en>Education</span>
+        </a></li>
+        <li><a href="#projects" class="nav-link">
+          <span data-zh>科研项目</span><span data-en>Projects</span>
+        </a></li>
+        <li><a href="#service" class="nav-link">
+          <span data-zh>学术服务</span><span data-en>Service</span>
+        </a></li>
+        <li><a href="#news" class="nav-link">
+          <span data-zh>新闻动态</span><span data-en>News</span>
+        </a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" title="切换语言 / Switch Language">
+          <span data-zh>EN</span>
+          <span data-en>中文</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="菜单">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Hero 区域 ===== -->
+  <section class="hero" id="hero">
+    <div class="container hero-content">
+      <div class="hero-avatar">
+        <div class="avatar-placeholder">
+          <div class="avatar-ring"></div>
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="60" cy="45" r="22" fill="#64748b"/>
+            <ellipse cx="60" cy="95" rx="35" ry="22" fill="#64748b"/>
+          </svg>
+        </div>
+      </div>
+      <div class="hero-text">
+        <p class="hero-greeting">
+          <span data-zh>你好，我是</span>
+          <span data-en>Hi, I'm</span>
+        </p>
+        <h1>
+          <span data-zh>刘齐</span>
+          <span data-en>Qi Liu</span>
+        </h1>
+        <p class="hero-title">
+          <span data-zh>博士生</span>
+          <span data-en>Ph.D. Student</span>
+        </p>
+        <p class="hero-affiliation">
+          <span data-zh>北京师范大学 · 地理科学学部</span>
+          <span data-en>Faculty of Geographical Science, Beijing Normal University</span>
+        </p>
+        <p class="hero-bio">
+          <span data-zh>专注于生态系统服务、可持续发展、社会-生态系统和 AI for Science 等领域的研究。</span>
+          <span data-en>Focused on Ecosystem Services, Sustainable Development, Social-Ecological Systems, and AI for Science.</span>
+        </p>
+        <div class="hero-tags">
+          <span class="tag">Ecosystem Services</span>
+          <span class="tag">Sustainability</span>
+          <span class="tag">Social-Ecological Systems</span>
+          <span class="tag">AI for Science</span>
+        </div>
+        <div class="hero-links">
+          <a href="mailto:upwardliuqi@163.com" class="social-link" title="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+          </a>
+          <a href="#" class="social-link" title="Google Scholar">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-3a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM1.5 4.5L12 13.5 22.5 4.5 12 0z"/></svg>
+          </a>
+          <a href="#" class="social-link" title="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="#" class="social-link" title="ORCID">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.05-2.484 4.05-3.722 0-1.397-.891-3.722-3.894-3.722h-2.453z"/></svg>
+          </a>
+          <a href="#" class="social-link" title="ResearchGate">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.586 0c-1.225 0-2.316.672-2.902 1.688-.586 1.015-.543 2.27.117 3.24.66.97 1.803 1.504 2.988 1.397 1.185-.107 2.218-.843 2.7-1.928.483-1.084.34-2.347-.375-3.308C21.4.53 20.52 0 19.586 0zM4.175 5.775c-1.24 0-2.39.65-3.088 1.71C.39 8.546.25 9.923.797 11.063c.548 1.14 1.63 1.925 2.85 2.068a3.73 3.73 0 0 0 3.122-1.18h.025v.75h2.025V5.95H6.794v.75A3.69 3.69 0 0 0 4.175 5.775zm15.411.175v4.5c0 1.406-.45 2.1-1.575 2.1-.975 0-1.425-.6-1.425-1.95V5.95h-2.025v5.1c0 2.4 1.2 3.45 3.15 3.45 1.05 0 1.875-.45 2.175-1.125h.025v.95h1.7V5.95h-2.025zM4.325 7.525c1.125 0 1.95.9 1.95 2.025S5.45 11.6 4.325 11.6c-1.125 0-1.95-.9-1.95-2.05s.825-2.025 1.95-2.025zm7.85 6.35c-.862 0-1.663.445-2.113 1.175-.45.73-.487 1.65-.1 2.412.39.763 1.154 1.263 2.013 1.313.86.05 1.674-.36 2.147-1.063h.028v.788h1.575v-7.225H14.15v.788a2.73 2.73 0 0 0-1.975-.188zm.275 1.5c.825 0 1.425.675 1.425 1.5s-.6 1.5-1.425 1.5-1.425-.675-1.425-1.5.6-1.5 1.425-1.5z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 研究方向 ===== -->
+  <section class="section" id="research">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">
+        <span data-zh>研究方向</span>
+        <span data-en>Research Interests</span>
+      </h2>
+      <div class="research-grid">
+        <div class="research-card animate-on-scroll">
+          <div class="research-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="24" r="16"/><path d="M12 24c0-4 4-8 12-8s12 4 12 8"/><path d="M16 20c2-4 6-6 8-6s6 2 8 6"/><circle cx="24" cy="32" r="4"/></svg>
+          </div>
+          <h3>
+            <span data-zh>生态系统服务</span>
+            <span data-en>Ecosystem Services</span>
+          </h3>
+          <p>
+            <span data-zh>研究生态系统服务的时空演变格局、交互关系及其驱动机制，探索生态环境质量与景观格局的动态关联。</span>
+            <span data-en>Studying spatiotemporal evolution patterns, interactions, and driving mechanisms of ecosystem services, exploring dynamic relationships between ecological environmental quality and landscape patterns.</span>
+          </p>
+        </div>
+        <div class="research-card animate-on-scroll">
+          <div class="research-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M24 4v40M4 24h40"/><circle cx="24" cy="24" r="18"/><path d="M10 14l28 20M10 34l28-20"/></svg>
+          </div>
+          <h3>
+            <span data-zh>可持续发展</span>
+            <span data-en>Sustainable Development</span>
+          </h3>
+          <p>
+            <span data-zh>关注区域可持续发展问题，研究耕地利用生态效率、绿色金融与乡村发展的耦合协调关系。</span>
+            <span data-en>Focusing on regional sustainable development, studying cultivated land use eco-efficiency and the coupled coordination between green finance and rural development.</span>
+          </p>
+        </div>
+        <div class="research-card animate-on-scroll">
+          <div class="research-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="16" cy="16" r="8"/><circle cx="32" cy="32" r="8"/><path d="M22 22l4 4"/><path d="M8 32h8v8"/><path d="M32 8h8v8"/></svg>
+          </div>
+          <h3>
+            <span data-zh>社会-生态系统</span>
+            <span data-en>Social-Ecological Systems</span>
+          </h3>
+          <p>
+            <span data-zh>从社会-生态系统耦合视角出发，研究人地关系的非线性效应与时空异质性。</span>
+            <span data-en>Studying nonlinear effects and spatiotemporal heterogeneity of human-environment relationships from the perspective of coupled social-ecological systems.</span>
+          </p>
+        </div>
+        <div class="research-card animate-on-scroll">
+          <div class="research-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><rect x="8" y="8" width="32" height="32" rx="4"/><path d="M16 28l6-8 4 4 6-8"/><circle cx="34" cy="16" r="3"/></svg>
+          </div>
+          <h3>
+            <span data-zh>AI for Science</span>
+            <span data-en>AI for Science</span>
+          </h3>
+          <p>
+            <span data-zh>探索人工智能技术在地理科学与生态环境研究中的应用，推动数据驱动的科学发现。</span>
+            <span data-en>Exploring applications of artificial intelligence in geographical science and ecological research, promoting data-driven scientific discovery.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 论文发表 ===== -->
+  <section class="section section-alt" id="publications">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">
+        <span data-zh>论文发表</span>
+        <span data-en>Publications</span>
+      </h2>
+      <div class="pub-filters animate-on-scroll">
+        <button class="pub-filter active" data-filter="all">
+          <span data-zh>全部</span><span data-en>All</span>
+        </button>
+        <button class="pub-filter" data-filter="english">
+          <span data-zh>英文论文</span><span data-en>English</span>
+        </button>
+        <button class="pub-filter" data-filter="chinese">
+          <span data-zh>中文论文</span><span data-en>Chinese</span>
+        </button>
+      </div>
+
+      <div class="pub-list">
+        <div class="pub-item animate-on-scroll" data-type="english">
+          <div class="pub-number">01</div>
+          <div class="pub-content">
+            <h4 class="pub-title">Spatiotemporal evolution of ecological environmental quality and its dynamic relationships with landscape pattern in the Zhengzhou Metropolitan Area: A perspective based on nonlinear effects and spatiotemporal heterogeneity</h4>
+            <p class="pub-authors"><strong class="pub-self">Q. Liu</strong>, et al.</p>
+          </div>
+          <div class="pub-links">
+            <a href="#" class="pub-link">PDF</a>
+            <a href="#" class="pub-link">DOI</a>
+          </div>
+        </div>
+        <div class="pub-item animate-on-scroll" data-type="english">
+          <div class="pub-number">02</div>
+          <div class="pub-content">
+            <h4 class="pub-title">Spatiotemporal heterogeneity of ecosystem service interactions and their drivers at different spatial scales in the Yellow River basin</h4>
+            <p class="pub-authors"><strong class="pub-self">Q. Liu</strong>, et al.</p>
+          </div>
+          <div class="pub-links">
+            <a href="#" class="pub-link">PDF</a>
+            <a href="#" class="pub-link">DOI</a>
+          </div>
+        </div>
+        <div class="pub-item animate-on-scroll" data-type="english">
+          <div class="pub-number">03</div>
+          <div class="pub-content">
+            <h4 class="pub-title">Spatiotemporal Evolution of Cultivated Land Use Eco-Efficiency and Its Dynamic Relationship with Landscape Pattern Change from the Perspective of Carbon Effect: A Case Study of Henan, China</h4>
+            <p class="pub-authors"><strong class="pub-self">Q. Liu</strong>, et al.</p>
+          </div>
+          <div class="pub-links">
+            <a href="#" class="pub-link">PDF</a>
+            <a href="#" class="pub-link">DOI</a>
+          </div>
+        </div>
+        <div class="pub-item animate-on-scroll" data-type="chinese">
+          <div class="pub-number">04</div>
+          <div class="pub-content">
+            <h4 class="pub-title">黄河流域绿色金融与乡村发展水平空间交互及其耦合协调分析</h4>
+            <p class="pub-authors"><strong class="pub-self">刘齐</strong>, 乔家君, 李孟娟, 等</p>
+            <p class="pub-venue">人文地理, 2025, 40(3): 88-101</p>
+          </div>
+          <div class="pub-links">
+            <a href="#" class="pub-link">PDF</a>
+            <a href="#" class="pub-link">DOI</a>
+          </div>
+        </div>
+        <div class="pub-item animate-on-scroll" data-type="chinese">
+          <div class="pub-number">05</div>
+          <div class="pub-content">
+            <h4 class="pub-title">河南省不同类型专业村的时空演变及其驱动因素</h4>
+            <p class="pub-authors"><strong class="pub-self">刘齐</strong>, 乔家君, 夏兴, 等</p>
+            <p class="pub-venue">河南大学学报(自然科学版), 2023, 53(5): 525-536</p>
+          </div>
+          <div class="pub-links">
+            <a href="#" class="pub-link">PDF</a>
+            <a href="#" class="pub-link">DOI</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 教育经历 ===== -->
+  <section class="section" id="education">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">
+        <span data-zh>教育经历</span>
+        <span data-en>Education</span>
+      </h2>
+      <div class="timeline">
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2024 –
+              <span data-zh>至今</span><span data-en>Present</span>
+            </div>
+            <h4>
+              <span data-zh>博士生 · 自然资源</span>
+              <span data-en>Ph.D. Student in Natural Resources</span>
+            </h4>
+            <p>
+              <span data-zh>北京师范大学 地理科学学部</span>
+              <span data-en>Faculty of Geographical Science, Beijing Normal University</span>
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2021 – 2024</div>
+            <h4>
+              <span data-zh>硕士 · 经济地理学</span>
+              <span data-en>M.S. in Economic Geography</span>
+            </h4>
+            <p>
+              <span data-zh>河南大学</span>
+              <span data-en>Henan University</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 科研项目 ===== -->
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">
+        <span data-zh>科研项目</span>
+        <span data-en>Research Projects</span>
+      </h2>
+      <div class="empty-state animate-on-scroll">
+        <div class="empty-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="10" width="36" height="28" rx="4"/><path d="M6 18h36"/><circle cx="14" cy="14" r="2"/><circle cx="22" cy="14" r="2"/></svg>
+        </div>
+        <p>
+          <span data-zh>暂无内容，敬请期待...</span>
+          <span data-en>Coming soon...</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 学术服务 ===== -->
+  <section class="section" id="service">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">
+        <span data-zh>学术服务</span>
+        <span data-en>Academic Service</span>
+      </h2>
+      <div class="empty-state animate-on-scroll">
+        <div class="empty-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M24 4l6 12 14 2-10 10 2 14-12-6-12 6 2-14L4 18l14-2z"/></svg>
+        </div>
+        <p>
+          <span data-zh>暂无内容，敬请期待...</span>
+          <span data-en>Coming soon...</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 新闻动态 ===== -->
+  <section class="section section-alt" id="news">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">
+        <span data-zh>新闻动态</span>
+        <span data-en>News</span>
+      </h2>
+      <div class="empty-state animate-on-scroll">
+        <div class="empty-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="6" width="36" height="36" rx="4"/><path d="M14 18h20M14 26h14M14 34h8"/></svg>
+        </div>
+        <p>
+          <span data-zh>暂无内容，敬请期待...</span>
+          <span data-en>Coming soon...</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 页脚 ===== -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>
+            <span data-zh>联系方式</span>
+            <span data-en>Contact</span>
+          </h3>
+          <p>
+            <span data-zh>邮箱：upwardliuqi@163.com</span>
+            <span data-en>Email: upwardliuqi@163.com</span>
+          </p>
+          <p>
+            <span data-zh>地址：北京市海淀区新街口外大街19号 北京师范大学 地理科学学部</span>
+            <span data-en>Address: Faculty of Geographical Science, Beijing Normal University, No. 19 Xinjiekouwai St, Haidian, Beijing, China</span>
+          </p>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Qi Liu. All rights reserved.</p>
+          <button class="back-to-top" id="backToTop" aria-label="Back to top">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
