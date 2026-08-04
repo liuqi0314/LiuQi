@@ -157,6 +157,11 @@ pubFilters.forEach(btn => {
         item.classList.add('hidden');
       }
     });
+
+    document.querySelectorAll('.pub-year-group').forEach(group => {
+      const visibleItems = group.querySelectorAll('.pub-item:not(.hidden)');
+      group.classList.toggle('year-hidden', visibleItems.length === 0);
+    });
   });
 });
 
